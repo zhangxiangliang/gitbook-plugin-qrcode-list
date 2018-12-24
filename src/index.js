@@ -1,5 +1,7 @@
 var qrcode = require('../lib/qrcode.js');
 
+qrcode.stringToBytes = qrcode.stringToBytesFuncs['UTF-8'];
+
 var me = module.exports = {
   // Extend website resources and html
   website: {
