@@ -80,7 +80,7 @@
         "description": "if qrcode img src is null, will use text to qrcode img"
       },
       "margin": {
-        "type": "integer",
+        "type": "number",
         "default": "''",
         "description": "set text generate qrcode margin"
       }

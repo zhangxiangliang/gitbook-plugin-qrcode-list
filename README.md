@@ -1,6 +1,7 @@
 # GitBook Qrcode List
 
 [![Build Status](https://travis-ci.org/pushmetop/gitbook-plugin-qrcode-list.svg?branch=master)](https://travis-ci.org/pushmetop/gitbook-plugin-qrcode-list)
+[![codecov](https://codecov.io/gh/pushmetop/gitbook-plugin-qrcode-list/branch/master/graph/badge.svg)](https://codecov.io/gh/pushmetop/gitbook-plugin-qrcode-list)
 
 ## 简介
 
@@ -59,6 +60,7 @@
 * lists.alt - 二维码图片无法加载时的代替内容，类型为字符串。
 * lists.content - 二维码图片描述，类型为字符串。
 * lists.text - 需要转化为二维码图片的内容，当 src 不存在时或者为空字符串时，会生成二维码，类型为字符串。
+* lists.margin - 二维码图片的边框大小，类型为数字。
 
 ## 打赏&联系
 
