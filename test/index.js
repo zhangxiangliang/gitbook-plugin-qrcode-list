@@ -43,7 +43,7 @@ describe('Test createQrcode', function () {
   var createQrcode = qrcodeList.createQrcode;
 
   it('createQrcode is work', function () {
-    expect(createQrcode('pushmetop')).to.have.string('svg');
+    expect(createQrcode('pushmetop')).to.have.string('data:image');
   });
 
 });
