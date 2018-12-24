@@ -1,0 +1,77 @@
+{
+  "name": "gitbook-plugin-qrcode-list",
+  "version": "0.1.0",
+  "description": "Gitbook page footer show qrcode list",
+  "main": "./src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pushmetop/gitbook-plugin-qrcode-list.git"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "keywords": [
+    "gitbook",
+    "gitbook-plugin",
+    "footer",
+    "qrcode",
+    "list"
+  ],
+  "author": "pushmetop <admin@pushme.top> (http://github.com/pushmetop)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pushmetop/gitbook-plugin-qrcode-list/issues"
+  },
+  "homepage": "https://github.com/pushmetop/gitbook-plugin-qrcode-list#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  },
+  "engines": {
+    "gitbook": "*"
+  },
+  "gitbook": {
+    "properties": {
+      "title": {
+        "type": "string",
+        "default": "",
+        "description": "this block title"
+      },
+      "description": {
+        "type": "string",
+        "default": "",
+        "description": "this block description"
+      },
+      "except": {
+        "type": "array",
+        "default": "[]",
+        "description": "if not in except show qrcode list"
+      },
+      "lists": {
+        "type": "array",
+        "default": "[]",
+        "description": "item is {'src': '', 'content': '', 'alt':'', 'text': '' }"
+      },
+      "src": {
+        "type": "string",
+        "default": "''",
+        "description": "qrcode img src"
+      },
+      "content": {
+        "type": "string",
+        "default": "''",
+        "description": "qrcode description"
+      },
+      "alt": {
+        "type": "string",
+        "default": "''",
+        "description": "qrcode img alt"
+      },
+      "text": {
+        "type": "string",
+        "default": "''",
+        "description": "if qrcode img src is null, will use text to qrcode img"
+      }
+    }
+  }
+}
