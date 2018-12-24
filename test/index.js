@@ -10,6 +10,7 @@ describe('Test getOption', function () {
     expect(getOption(null)).to.deep.equal({
       'except': [],
       'lists': [],
+      'only': null,
       'title': '',
       'description': '',
     });
@@ -21,6 +22,7 @@ describe('Test getOption', function () {
     })).to.deep.equal({
       'except': ['README.md'],
       'lists': [],
+      'only': null,
       'title': '',
       'description': '',
     });
@@ -30,6 +32,7 @@ describe('Test getOption', function () {
     })).to.deep.equal({
       'except': [],
       'lists': [],
+      'only': null,
       'title': '',
       'description': '',
     });
@@ -252,6 +255,37 @@ describe('Test buildHtml', function () {
             '<p>pushmetop</p>' +
           '</div>' +
         '</footer>',
+    });
+  });
+
+  it('page is not in only', function () {
+    var change = pageBefore.bind({
+      config: {
+        get: function (config) {
+          return {
+            'qrcode-list': {
+              title: 'pushmetop',
+              description: 'pushmetop',
+              only: [],
+              lists: [
+                {
+                  src: 'pushmetop',
+                  content: 'pushmetop',
+                  alt: 'pushmetop',
+                }
+              ],
+            },
+          };
+        },
+      }
+    });
+
+    expect(change({
+      title: 'pushmetop',
+      content: '',
+    })).to.deep.equal({
+      title: 'pushmetop',
+      content: '',
     });
   });
 });
