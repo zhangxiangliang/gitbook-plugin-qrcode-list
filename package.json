@@ -8,7 +8,7 @@
     "url": "git+https://github.com/pushmetop/gitbook-plugin-qrcode-list.git"
   },
   "scripts": {
-    "test": "istanbul cover node_modules/mocha/bin/_mocha && codecov -F istanbul_mocha"
+    "test": "istanbul cover -x 'lib/**' node_modules/mocha/bin/_mocha && codecov -F istanbul_mocha"
   },
   "keywords": [
     "gitbook",
@@ -57,7 +57,7 @@
       "lists": {
         "type": "array",
         "default": "[]",
-        "description": "item is {'src': '', 'content': '', 'alt':'', 'text': '' }"
+        "description": "item is {'src': '', 'content': '', 'alt':'', 'text': '', 'margin': 4}"
       },
       "src": {
         "type": "string",
@@ -78,6 +78,11 @@
         "type": "string",
         "default": "''",
         "description": "if qrcode img src is null, will use text to qrcode img"
+      },
+      "margin": {
+        "type": "integer",
+        "default": "''",
+        "description": "set text generate qrcode margin"
       }
     }
   }
