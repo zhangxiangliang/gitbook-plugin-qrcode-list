@@ -57,33 +57,8 @@
 * lists.content - 二维码图片描述，类型为字符串。
 * lists.text - 需要转化为二维码图片的内容，当 src 不存在时或者为空字符串时，会生成二维码，类型为字符串。
 
-<style>
-.gitbook-plugin-qrcode-lists h2,
-.gitbook-plugin-qrcode-lists p {
-  text-align: left;
-}
+## 打赏&联系
 
-.gitbook-plugin-qrcode-list {
-  width: 20%;
-  display: inline-block;
-}
+如果您感觉有收获，欢迎给我打赏，以激励我输出更多的优质内容。
 
-.gitbook-plugin-qrcode-list img {
-  width: 100%;
-}
-
-.gitbook-plugin-qrcode-list p {
-  text-align: center;
-}
-
-@media screen and (max-width: 768px) {
-  .gitbook-plugin-qrcode-lists {
-    text-align: center;
-  }
-  .gitbook-plugin-qrcode-list {
-    width: 80%;
-  }
-}
-</style>
-
-<footer class="gitbook-plugin-qrcode-lists"><h2 id="打赏联系">打赏&amp;联系</h2><p>如果您感觉有收获，欢迎给我打赏，以激励我输出更多的优质内容。</p><div class="gitbook-plugin-qrcode-list"><img src="https://raw.githubusercontent.com/pushmetop/resource/master/donate/alipay.png" alt="支付宝"><p>支付宝</p></div><div class="gitbook-plugin-qrcode-list"><img src="https://raw.githubusercontent.com/pushmetop/resource/master/donate/wxpay.png" alt="微信支付"><p>微信支付</p></div><div class="gitbook-plugin-qrcode-list"><img src="https://raw.githubusercontent.com/pushmetop/resource/master/donate/wechat.png" alt="微信"><p>微信</p></div><div class="gitbook-plugin-qrcode-list"><img src="https://raw.githubusercontent.com/pushmetop/resource/master/donate/group.png" alt="QQ群"><p>QQ群</p></div></footer>
+![打赏&联系](https://raw.githubusercontent.com/pushmetop/resource/master/donate/donate.png)
