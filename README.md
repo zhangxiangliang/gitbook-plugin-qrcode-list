@@ -1,5 +1,7 @@
 # GitBook Qrcode List
 
+[![Build Status](https://travis-ci.org/pushmetop/gitbook-plugin-qrcode-list.svg?branch=master)](https://travis-ci.org/pushmetop/gitbook-plugin-qrcode-list)
+
 ## 简介
 
 * 一款 gitbook 插件。
