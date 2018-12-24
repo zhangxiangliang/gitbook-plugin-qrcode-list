@@ -1,4 +1,4 @@
-var qrcode = require('./qrcode.js');
+var qrcode = require('../lib/qrcode.js');
 
 var me = module.exports = {
   // Extend website resources and html
@@ -100,7 +100,7 @@ var me = module.exports = {
     list.alt = list.alt ? list.alt : '';
     list.content = list.content ? list.content : '';
     list.text = list.text ? list.text : '';
-    list.src = list.src && list.src != '' ? list.src : me.createQrcode(list.text);
+    list.src = list.src && list.src != '' ? list.src : me.createQrcode(list.text, list.margin);
 
     return list.src
       ? '' + 
@@ -112,10 +112,10 @@ var me = module.exports = {
   },
 
   // Create qrcode
-  createQrcode: function (text, typeNumber, errorCorrectLevel) {
+  createQrcode: function (text, margin, typeNumber, errorCorrectLevel) {
     var qr = qrcode(typeNumber || 10, errorCorrectLevel || 'H');
     qr.addData(text);
     qr.make();
-    return qr.createSvgTag();
+    return qr.createDataURL(2, margin || 4);
   }
 };
