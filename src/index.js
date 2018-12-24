@@ -12,8 +12,9 @@ var me = module.exports = {
     'page:before': function (page) {
       var option = me.getOption(this.config.get('pluginsConfig')['qrcode-list']);
 
-      if (option.except.indexOf(page.title) != -1
-        || option.lists.length == 0) {
+      if (option.lists.length == 0
+        || (!option.only && option.except.indexOf(page.title) != -1)
+        || (!option.except && option.only && option.only.indexOf(page.title) == -1)) {
         return page;
       }
 
@@ -34,7 +35,8 @@ var me = module.exports = {
   // Get the operation to use default values if none exists
   getOption: function (config) {
     var defaultOption = {
-      'except': [],
+      'except': null,
+      'only': null,
       'lists': [],
       'title': '',
       'description': '',
@@ -46,6 +48,10 @@ var me = module.exports = {
           defaultOption[item] = config[item];
         }
       }
+    }
+
+    if (defaultOption.except === null && defaultOption.only  === null) {
+      defaultOption.except = [];
     }
   
     return defaultOption;
@@ -84,7 +90,8 @@ var me = module.exports = {
 
     list.alt = list.alt ? list.alt : '';
     list.content = list.content ? list.content : '';
-    list.src = list.src ? list.src : me.createQrcode(list.text);
+    list.text = list.text ? list.text : '';
+    list.src = list.src && list.src != '' ? list.src : me.createQrcode(list.text);
 
     return list.src
       ? '' + 
