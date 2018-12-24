@@ -53,8 +53,19 @@ var me = module.exports = {
     if (defaultOption.except === null && defaultOption.only  === null) {
       defaultOption.except = [];
     }
+
+    if (me.isArray(defaultOption.except) && me.isArray(defaultOption.only)) {
+      defaultOption.only = null;
+    }
   
     return defaultOption;
+  },
+
+  // Judge is array
+  isArray: function (target) {
+    return target
+      && typeof target === 'object'
+      && target.constructor === Array;
   },
 
   // Build footer qrcode list html
@@ -64,9 +75,7 @@ var me = module.exports = {
     title = title && title != '' ? '<h2>' + title + '</h2>' : '';
     description = description && description != '' ? '<p>' + description + '</p>' : '';
     
-    lists = lists
-      && typeof lists === 'object'
-      && lists.constructor === Array ? lists : [];
+    lists = me.isArray(lists) ? lists : [];
 
     for (var i = 0; i < lists.length; i++) {
       html += me.buildList(lists[i]);
