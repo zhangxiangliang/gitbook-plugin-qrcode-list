@@ -289,3 +289,18 @@ describe('Test buildHtml', function () {
     });
   });
 });
+
+describe('Test isArray', function () {
+  var isArray =  qrcodeList.isArray;
+ 
+  it('is array', function () {
+    expect(isArray([])).to.equal(true);
+    expect(isArray(['pushmetop', 'to', 'be', 1])).to.equal(true);
+  });
+
+  it('is not array', function () {
+    expect(isArray(1)).to.equal(false);
+    expect(isArray('pushmetop')).to.equal(false);
+    expect(isArray({'pushmetop': 'pushmetop'})).to.equal(false);
+  });
+});
