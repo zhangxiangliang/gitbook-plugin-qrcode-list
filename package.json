@@ -11,11 +11,10 @@
     "test": "istanbul cover -x 'lib/**' node_modules/mocha/bin/_mocha && codecov -F istanbul_mocha"
   },
   "keywords": [
-    "gitbook",
+    "pushmetop",
     "gitbook-plugin",
     "footer",
-    "qrcode",
-    "list"
+    "qrcode"
   ],
   "author": "pushmetop <admin@pushme.top> (http://github.com/pushmetop)",
   "license": "MIT",
