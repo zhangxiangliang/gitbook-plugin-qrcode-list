@@ -42,6 +42,11 @@
         "default": "",
         "description": "this block description"
       },
+      "only": {
+        "type": "array",
+        "default": "[]",
+        "description": "if in only show qrcode list"
+      },
       "except": {
         "type": "array",
         "default": "[]",
