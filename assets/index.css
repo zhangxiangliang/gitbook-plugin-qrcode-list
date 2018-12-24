@@ -1,0 +1,26 @@
+.gitbook-plugin-qrcode-lists h2,
+.gitbook-plugin-qrcode-lists p {
+  text-align: left;
+}
+
+.gitbook-plugin-qrcode-list {
+  width: 20%;
+  display: inline-block;
+}
+
+.gitbook-plugin-qrcode-list img {
+  width: 100%;
+}
+
+.gitbook-plugin-qrcode-list p {
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .gitbook-plugin-qrcode-lists {
+    text-align: center;
+  }
+  .gitbook-plugin-qrcode-list {
+    width: 80%;
+  }
+}
