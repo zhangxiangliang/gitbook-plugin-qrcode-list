@@ -45,42 +45,42 @@
       },
       "only": {
         "type": "array",
-        "default": "[]",
+        "default": [],
         "description": "if in only show qrcode list"
       },
       "except": {
         "type": "array",
-        "default": "[]",
+        "default": [],
         "description": "if not in except show qrcode list"
       },
       "lists": {
         "type": "array",
-        "default": "[]",
+        "default": [],
         "description": "item is {'src': '', 'content': '', 'alt':'', 'text': '', 'margin': 4}"
       },
       "src": {
         "type": "string",
-        "default": "''",
+        "default": "",
         "description": "qrcode img src"
       },
       "content": {
         "type": "string",
-        "default": "''",
+        "default": "",
         "description": "qrcode description"
       },
       "alt": {
         "type": "string",
-        "default": "''",
+        "default": "",
         "description": "qrcode img alt"
       },
       "text": {
         "type": "string",
-        "default": "''",
+        "default": "",
         "description": "if qrcode img src is null, will use text to qrcode img"
       },
       "margin": {
         "type": "number",
-        "default": "''",
+        "default": "",
         "description": "set text generate qrcode margin"
       }
     }
