@@ -15,8 +15,8 @@ var me = module.exports = {
       var option = me.getOption(this.config.get('pluginsConfig')['qrcode-list']);
 
       if (option.lists.length == 0
-        || (!option.only && option.except.indexOf(page.title) != -1)
-        || (!option.except && option.only && option.only.indexOf(page.title) == -1)) {
+        || (option.only.length == 0 && option.except.indexOf(page.title) != -1)
+        || (option.except.length == 0 && option.only.indexOf(page.title) == -1)) {
         return page;
       }
 
@@ -37,13 +37,13 @@ var me = module.exports = {
   // Get the operation to use default values if none exists
   getOption: function (config) {
     var defaultOption = {
-      'except': null,
-      'only': null,
+      'except': [],
+      'only': [],
       'lists': [],
       'title': '',
       'description': '',
     };
-  
+    
     if (config) {
       for (var item in defaultOption) {
         if (item in config) {
@@ -52,12 +52,12 @@ var me = module.exports = {
       }
     }
 
-    if (defaultOption.except === null && defaultOption.only  === null) {
+    if (defaultOption.except == '[]') {
       defaultOption.except = [];
     }
 
-    if (me.isArray(defaultOption.except) && me.isArray(defaultOption.only)) {
-      defaultOption.only = null;
+    if (defaultOption.except.length > 0 && defaultOption.only.length > 0) {
+      defaultOption.only = [];
     }
   
     return defaultOption;
