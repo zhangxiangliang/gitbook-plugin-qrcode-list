@@ -15,8 +15,8 @@ var me = module.exports = {
       var option = me.getOption(this.config.get('pluginsConfig')['qrcode-list']);
 
       if (option.lists.length == 0
-        || (option.only.length == 0 && option.except.indexOf(page.title) != -1)
-        || (option.except.length == 0 && option.only.indexOf(page.title) == -1)) {
+        || (option.only.length == 0 && option.except.length > 0 && option.except.indexOf(page.title) != -1)
+        || (option.except.length == 0 && option.only.length > 0 && option.only.indexOf(page.title) == -1)) {
         return page;
       }
 
