@@ -10,7 +10,7 @@ describe('Test getOption', function () {
     expect(getOption(null)).to.deep.equal({
       'except': [],
       'lists': [],
-      'only': null,
+      'only': [],
       'title': '',
       'description': '',
     });
@@ -22,7 +22,7 @@ describe('Test getOption', function () {
     })).to.deep.equal({
       'except': ['README.md'],
       'lists': [],
-      'only': null,
+      'only': [],
       'title': '',
       'description': '',
     });
@@ -32,7 +32,7 @@ describe('Test getOption', function () {
     })).to.deep.equal({
       'except': [],
       'lists': [],
-      'only': null,
+      'only': [],
       'title': '',
       'description': '',
     });
@@ -258,7 +258,7 @@ describe('Test buildHtml', function () {
     });
   });
 
-  it('page is not in only', function () {
+  it('page is in only', function () {
     var change = pageBefore.bind({
       config: {
         get: function (config) {
@@ -266,7 +266,7 @@ describe('Test buildHtml', function () {
             'qrcode-list': {
               title: 'pushmetop',
               description: 'pushmetop',
-              only: [],
+              only: [ 'pushmetop' ],
               lists: [
                 {
                   src: 'pushmetop',
@@ -285,6 +285,45 @@ describe('Test buildHtml', function () {
       content: '',
     })).to.deep.equal({
       title: 'pushmetop',
+      content: '' + 
+        '<footer class="gitbook-plugin-qrcode-lists">' + 
+          '<h2>pushmetop</h2>' +
+          '<p>pushmetop</p>' +
+          '<div class="gitbook-plugin-qrcode-list">' + 
+            '<img src="pushmetop" alt="pushmetop">' +
+            '<p>pushmetop</p>' +
+          '</div>' +
+        '</footer>',
+    });
+  });
+
+  it('page is not in only', function () {
+    var change = pageBefore.bind({
+      config: {
+        get: function (config) {
+          return {
+            'qrcode-list': {
+              title: 'pushmetop',
+              description: 'pushmetop',
+              only: [ 'pushmetop' ],
+              lists: [
+                {
+                  src: 'pushmetop',
+                  content: 'pushmetop',
+                  alt: 'pushmetop',
+                }
+              ],
+            },
+          };
+        },
+      }
+    });
+
+    expect(change({
+      title: 'the pushmetop',
+      content: '',
+    })).to.deep.equal({
+      title: 'the pushmetop',
       content: '',
     });
   });
