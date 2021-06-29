@@ -62,8 +62,8 @@
 * lists.text - 需要转化为二维码图片的内容，当 src 不存在时或者为空字符串时，会生成二维码，类型为字符串。
 * lists.margin - 二维码图片的边框大小，类型为数字。
 
-## 打赏&联系
+## 一起成长
 
-如果您感觉有收获，欢迎给我打赏，以激励我输出更多的优质内容。
+如果您感觉有收获可以点赞关注`激励我`，也欢迎到 [Github](https://github.com/zhangxiangliang/gitbook-plugin-qrcode-list) 加个 star。
 
-![打赏&联系](https://raw.githubusercontent.com/pushmetop/resource/master/donate/donate.png)
+> 本文原稿来自 [ZhangXiangLiang](https://github.com/zhangxiangliang)
