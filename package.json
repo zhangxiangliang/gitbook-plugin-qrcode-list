@@ -1,27 +1,30 @@
 {
   "name": "gitbook-plugin-qrcode-list",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Gitbook page footer show qrcode list",
   "main": "./src/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pushmetop/gitbook-plugin-qrcode-list.git"
+    "url": "git+https://github.com/zhangxiangliang/gitbook-plugin-qrcode-list.git"
   },
   "scripts": {
     "test": "istanbul cover -x 'lib/**' node_modules/mocha/bin/_mocha && codecov -F istanbul_mocha"
   },
   "keywords": [
-    "pushmetop",
+    "blockchain",
+    "ethereum",
+    "bitcoin",
+    "web3",
     "gitbook-plugin",
     "footer",
     "qrcode"
   ],
-  "author": "pushmetop <admin@pushme.top> (http://github.com/pushmetop)",
+  "author": "zhangxiangliang",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pushmetop/gitbook-plugin-qrcode-list/issues"
+    "url": "https://github.com/zhangxiangliang/gitbook-plugin-qrcode-list/issues"
   },
-  "homepage": "https://github.com/pushmetop/gitbook-plugin-qrcode-list#readme",
+  "homepage": "https://github.com/zhangxiangliang/gitbook-plugin-qrcode-list#readme",
   "devDependencies": {
     "chai": "^4.2.0",
     "codecov": "^3.7.1",
